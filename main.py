@@ -27,10 +27,10 @@ def clear_drawing():
 
 def draw():
     screen.listen()
-    screen.onkey(key="W", fun=forward)
-    screen.onkey(key="S", fun=backward)
-    screen.onkey(key="A", fun=counter_clockwise)
-    screen.onkey(key="D", fun=clockwise)
+    screen.onkey(key="Up", fun=forward)
+    screen.onkey(key="Down", fun=backward)
+    screen.onkey(key="Left", fun=counter_clockwise)
+    screen.onkey(key="Right", fun=clockwise)
     screen.onkey(key="C", fun=clear_drawing)
 
 
