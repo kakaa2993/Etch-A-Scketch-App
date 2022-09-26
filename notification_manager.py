@@ -1,6 +1,6 @@
 import smtplib
 
-smtp_address = "smtp.gmail.com"  # type your smtp_address
+smtp_address = "smtp.gmail.com" # Type your smtp address
 my_email = ""  # Type your email
 my_password = ""  # Type your password
 
@@ -14,7 +14,7 @@ class NotificationManager:
 
     def send_message(self, departure_airport_IATA_code, destination_airport_IATA_code, departure_city,
                      destination_city, flight_price, data_departure, data_arrival):
-        message = f"Subject:Low Price Alert!\n\nOnly {flight_price} EUR to fly from " \
+        message = f"Subject:Low Price Alert!\n\nOnly £{flight_price} to fly from " \
                   f"{departure_city}-{departure_airport_IATA_code} to {destination_city}-{destination_airport_IATA_code}," \
                   f" from {data_departure} to {data_arrival}."
         with smtplib.SMTP(self.smtp_address) as connection:
