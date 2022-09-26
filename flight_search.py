@@ -4,6 +4,7 @@ import requests
 # tequila.kiwi.com
 KIWI_ENDPOINT = "https://api.tequila.kiwi.com/v2/search"
 API_KEY = "" # Type your api key
+CURRENCY = "GBP"
 
 
 class FlightSearch:
@@ -27,6 +28,7 @@ class FlightSearch:
             "fly_to": self.FLAY_TO,
             "dateFrom": self.TOMORROW_DATE,
             "dateTo": self.NEXT_6_MONTH_DATE,
+            "curr": CURRENCY,
         }
         self.headers = {
             "apikey": API_KEY,
