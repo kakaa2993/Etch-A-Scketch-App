@@ -1,8 +1,8 @@
 import requests
 
 # tequila.kiwi.com
-KIWI_ENDPOINT = "https://api.tequila.kiwi.com/locations/query"
-API_KEY = ""  # Type your api key
+TEQUILA_ENDPOINT = "https://api.tequila.kiwi.com/locations/query"
+TEQUILA_API_KEY = ""  # Type your api key
 
 
 class FlightData:
@@ -18,13 +18,12 @@ class FlightData:
             "limit": 1,
         }
         self.headers = {
-            "apikey": API_KEY,
+            "apikey": TEQUILA_API_KEY,
             "Content-Encoding": "gzip",
             "Content-Type": "application/json",
         }
-        response = requests.get(url=KIWI_ENDPOINT, params=self.parameters, headers=self.headers)
+        response = requests.get(url=TEQUILA_ENDPOINT, params=self.parameters, headers=self.headers)
         CITY_IATA = response.json()["locations"][0]["code"]
-        # print(CITY_IATA)
         return CITY_IATA
 
     def check_lowest_prices(self, deal_price, lowest_price):
