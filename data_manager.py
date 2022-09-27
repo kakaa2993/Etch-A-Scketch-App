@@ -1,6 +1,7 @@
 import requests
 from flight_data import FlightData
-API_ENDPOINT = ""  # Type Your Own Copy of the Starting Google Sheet
+API_ENDPOINT = ""  # Type Your Own Copy of the cities Google Sheet
+USERS_API_ENDPOINT = ""# Type Your Own Copy of the users Google Sheet
 
 
 class DataManager:
@@ -24,7 +25,19 @@ class DataManager:
                         'iataCode': self.flight_data.get_city_IATA(city=city['city'])
                     }
                 }
-                response = requests.put(url=API_ENDPOINT+str(city['id']), json=parameter)
-                print(response.json())
+                requests.put(url=API_ENDPOINT+str(city['id']), json=parameter)
 
+    def add_user(self, first_name, last_name, email):
+        users_parameters = {
+            "user": {
+                'firstName': first_name,
+                "lastName": last_name,
+                "email": email,
+            }
+        }
+        requests.post(url=USERS_API_ENDPOINT, json=users_parameters)
 
+    def get_users_email(self):
+        response = requests.get(url=USERS_API_ENDPOINT,)
+        email_list = [user["email"] for user in response.json()["users"]]
+        return email_list
