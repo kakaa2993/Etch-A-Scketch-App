@@ -28,5 +28,3 @@ class FlightData:
 
     def check_lowest_prices(self, deal_price, lowest_price):
         return deal_price < lowest_price
-
-

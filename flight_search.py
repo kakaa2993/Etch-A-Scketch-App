@@ -1,9 +1,10 @@
 import datetime
+
 import requests
 
 # tequila.kiwi.com
 TEQUILA_ENDPOINT = "https://api.tequila.kiwi.com/v2/search"
-TEQUILA_API_KEY = "" # Type your api key
+TEQUILA_API_KEY = ""  # Type your api key
 CURRENCY = "GBP"
 
 
@@ -17,6 +18,8 @@ class FlightSearch:
         self.FLAY_TO = flay_to
         self.parameters = None
         self.headers = None
+        self.stop_overs = 0
+        self.via_city = ""
         self.data = self.get_data()
         self.departure_airport_IATA = self.data["flyFrom"]
         self.destination_airport_IATA = self.data["flyTo"]
@@ -28,6 +31,11 @@ class FlightSearch:
             "fly_to": self.FLAY_TO,
             "dateFrom": self.TOMORROW_DATE,
             "dateTo": self.NEXT_6_MONTH_DATE,
+            "nights_in_dst_from": 7,
+            "nights_in_dst_to": 28,
+            "flight_type": "round",
+            "one_for_city": 1,
+            "max_stopovers": 0,
             "curr": CURRENCY,
         }
         self.headers = {
@@ -36,10 +44,30 @@ class FlightSearch:
             "Content-Type": "application/json",
         }
         response = requests.get(url=TEQUILA_ENDPOINT, params=self.parameters, headers=self.headers)
-        data = response.json()["data"][0]
-        return data
+        try:
+            data = response.json()["data"][0]
+            return data
+        except IndexError:
+            print(f"No flight Found to {self.FLAY_TO}")
+            self.parameters = {
+                "fly_from": self.FLAY_FROM,
+                "fly_to": self.FLAY_TO,
+                "dateFrom": self.TOMORROW_DATE,
+                "dateTo": self.NEXT_6_MONTH_DATE,
+                "nights_in_dst_from": 7,
+                "nights_in_dst_to": 28,
+                "flight_type": "round",
+                "one_for_city": 1,
+                "max_stopovers": 2,
+                "curr": CURRENCY,
+            }
+            response = requests.get(url=TEQUILA_ENDPOINT, params=self.parameters, headers=self.headers)
+            data = response.json()["data"]
+            if data:
+                self.stop_overs = 1
+                self.via_city = data[0]['route'][0]['cityTo']
+                return data[0]
 
     def get_price(self):
-        price = self.data["price"]
+        price = self.data["conversion"]["GBP"]
         return price
-
