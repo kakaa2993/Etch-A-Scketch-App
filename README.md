@@ -21,3 +21,9 @@ You should get Kiwi Partners Flight Search API key (Free Signup) - (``https://pa
 
 
 2-You should get Kiwi Partners Flight Search API key (Free Signup) - (``https://partners.kiwi.com/``)
+
+
+
+
+Have a good flight!😃
+
