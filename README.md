@@ -15,8 +15,9 @@ You should get Kiwi Partners Flight Search API key (Free Signup) - (``https://pa
 
 - If the price is lower than the lowest price listed in the Google Sheet then it send an email to all the email list in the user google sheet that you hould create and use it in ``https://sheety.co/`` to turn in to an api .
 
-** What You Need To Run The Script
+##What You Need To Run The Script
 
 1- Use this  the Google sheet (``https://docs.google.com/spreadsheets/d/1YMK-kYDYwuiGZoawQy7zyDjEIU9u8oggCV4H2M9j7os/edit?usp=sharing``) Api.
+
 
 2-You should get Kiwi Partners Flight Search API key (Free Signup) - (``https://partners.kiwi.com/``)
