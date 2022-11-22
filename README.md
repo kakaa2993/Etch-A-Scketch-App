@@ -5,11 +5,11 @@ Also this script collect list of emails and send the flight deals to all the peo
 
 
 - This script use Sheety API to get all the cities that he should looking for. 
-Make Your Own Copy of the Starting Google Sheet
+Make Your Own Copy of the Starting Google Sheet<br>
 Make a copy of the Google sheet (``https://docs.google.com/spreadsheets/d/1YMK-kYDYwuiGZoawQy7zyDjEIU9u8oggCV4H2M9j7os/edit?usp=sharing``).
 
 
-- It use the Flight Search API to check for the cheapest flights from tomorrow to 6 months later for all the cities in the Google Sheet.
+- It use the Flight Search API to check for the cheapest flights from tomorrow to 6 months later for all the cities in the Google Sheet.<br>
 You should get Kiwi Partners Flight Search API key (Free Signup) - (``https://partners.kiwi.com/``)
 
 
