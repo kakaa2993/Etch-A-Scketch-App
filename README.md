@@ -1,12 +1,12 @@
 # The Best Flight-Deals Finder
 
-A small script that detects the best and the cheapest flight deal for the cities that you are interested to go to, and send you an email if there is a flight dead or decrease in the flight prices for the upcomming days.<br>
-Also this script collect list of emails and send the flight deals to all the people in email list.
+A small script that detects the best and the cheapest flight deal for the cities that you are interested to go to, and send you an email if there is a flight dead or decrease in the flight prices for the upcomming days.  
+Also this script collect list of emails and send the flight deals to all the people in email list.  
 
 
 - This script use Sheety API to get all the cities that he should looking for. 
-Make Your Own Copy of the Starting Google Sheet<br>
-Make a copy of the Google sheet (``https://docs.google.com/spreadsheets/d/1YMK-kYDYwuiGZoawQy7zyDjEIU9u8oggCV4H2M9j7os/edit?usp=sharing``).
+1.Make Your Own Copy of the Starting Google Sheet.  
+2.Make a copy of the Google sheet (``https://docs.google.com/spreadsheets/d/1YMK-kYDYwuiGZoawQy7zyDjEIU9u8oggCV4H2M9j7os/edit?usp=sharing``).
 
 
 - It use the Flight Search API to check for the cheapest flights from tomorrow to 6 months later for all the cities in the Google Sheet.<br>
