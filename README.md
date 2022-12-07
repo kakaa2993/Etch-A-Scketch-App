@@ -5,8 +5,8 @@ Also this script collect list of emails and send the flight deals to all the peo
 
 
 - This script use Sheety API to get all the cities that he should looking for. 
-1.Make Your Own Copy of the Starting Google Sheet.  
-2.Make a copy of the Google sheet (``https://docs.google.com/spreadsheets/d/1YMK-kYDYwuiGZoawQy7zyDjEIU9u8oggCV4H2M9j7os/edit?usp=sharing``).
+.Make Your Own Copy of the Starting Google Sheet.  
+.Make a copy of the Google sheet (``https://docs.google.com/spreadsheets/d/1YMK-kYDYwuiGZoawQy7zyDjEIU9u8oggCV4H2M9j7os/edit?usp=sharing``).
 
 
 - It use the Flight Search API to check for the cheapest flights from tomorrow to 6 months later for all the cities in the Google Sheet.<br>
