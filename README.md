@@ -21,10 +21,8 @@ You should get Kiwi Partners Flight Search API key (Free Signup) - (``https://pa
 
 ## What You Need To Run The Script
 
-1- Use this  the Google sheet (``https://docs.google.com/spreadsheets/d/1YMK-kYDYwuiGZoawQy7zyDjEIU9u8oggCV4H2M9j7os/edit?usp=sharing``) API.
-
-
-2-You should get Kiwi Partners Flight Search API key (Free Signup) - (``https://partners.kiwi.com/``)
+1. Use this  the Google sheet (``https://docs.google.com/spreadsheets/d/1YMK-kYDYwuiGZoawQy7zyDjEIU9u8oggCV4H2M9j7os/edit?usp=sharing``) API.
+2. You should get Kiwi Partners Flight Search API key (Free Signup) - (``https://partners.kiwi.com/``)
 
 
 
